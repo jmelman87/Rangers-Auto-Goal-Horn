@@ -6,7 +6,7 @@ headers = {
     "Accept-Language": "en-US,en;q=0.9",
 }
 
-# Replace '3' with the ID of the team you are interested in
+# Replace '3' with the ID of the team you are interested in (3 is the ID for the New York Rangers...)
 team_id = 3
 url = f"https://statsapi.web.nhl.com/api/v1/teams/{team_id}?expand=team.schedule.next"
 
