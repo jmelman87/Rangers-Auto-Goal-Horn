@@ -25,13 +25,13 @@ EXACT name, including capital letters.
 Also, if you don't want to use the same equipment I used to run the goal effect, you can of course modify the entire siren() function to do something else when your team scores. 
 
 My python script for this project utilizies the following modules:
--time
--requests
--json
--asyncio
--kasa 
--magichue
--pygame
+1. time
+2. requests
+3. json
+4. asyncio
+5. kasa 
+6. magichue
+7. pygame
 
 The program uses Requests and JSON to make requests to the NHL's API and read back the information that is being provided by the API. It first checks to see what the next game scheduled is
 for your team, and when it finds the information, it makes a new request to the game-specific boxscore and live feed URLs in order to retrieve information about the game, such as 
