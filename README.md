@@ -38,6 +38,7 @@ for your team, and when it finds the information, it makes a new request to the 
 the game's date and time, the opponent, and the score. The program then runs a double nested while loop - the inner loop scans for a change in your team's score, and when a change is detected, the siren function is called, and the outer loop is scanning for a change in the game's status specifically to the value 'Final' so that the program understands the game is over
 and will therefore end the program. 
 
+** I am currently working on integrating a Raspberry Pi Pico W microchip into this project. I want the program to run off a microchip, instead of off my computer. The Pico W has Wi-Fi capability and will be able to connect to the NHL API directly. 
 
 
 
