@@ -5,13 +5,13 @@ I've always wanted to have my own goal horn with the Rangers goal song in my hou
 
 For this project, I used:
 
--NHL API (https://statsapi.web.nhl.com/api)
--Python with various modules
--AC powered red siren light
--KASA Smart Plug (used to control siren light)
--LED strip lights (MagicHome LED controller)
--A speaker (bluetooth or wired, doesn't matter)
--(Raspberry Pi Pico W integration in progress...)
+1. NHL API (https://statsapi.web.nhl.com/api)
+2. Python with various modules
+3. AC powered red siren light
+4. KASA Smart Plug (used to control siren light)
+5. LED strip lights (MagicHome LED controller)
+6. A speaker (bluetooth or wired, doesn't matter)
+7. (Raspberry Pi Pico W integration in progress...)
 
 
 Here is a link to the detailed NHL API documentation to learn how to use the API --> https://github.com/dword4/nhlapi#teams
