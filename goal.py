@@ -78,7 +78,7 @@ if response.status_code == 200:
 
             i = 0
 
-            if(home_team == 'New York Rangers'):
+            if(home_team == 'New York Rangers'): # REPLACE WITH YOUR EXACT TEAM NAME 
                 currentScore = home_score
                 print("Rangers are the HOME team")
                 
