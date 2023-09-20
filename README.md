@@ -22,6 +22,8 @@ can be found here: https://statsapi.web.nhl.com/api/v1/teams - just search for y
 It is also important to take note of the way the full name is spelled under "name", as you will need to replace 'New York Rangers' on line 81 in goal.py with your team's 
 EXACT name, including capital letters. 
 
+Lastly, you'll need to get an MP3 file of your team's goal song, and get the filepath. I did this simply by searching for the goal song on YouTube and then using a third party website to download the video as an MP3. 
+
 Also, if you don't want to use the same equipment I used to run the goal effect, you can of course modify the entire siren() function to do something else when your team scores. 
 
 My python script for this project utilizies the following modules:
