@@ -7,8 +7,8 @@ import magichue
 import pygame
 
 async def siren():
-    user = "ENTER USER / EMAIL HERE"
-    pwd = 'ENTER PASSWORD HERE'
+    user = "ENTER MAGICHOME USER / EMAIL HERE"
+    pwd = 'ENTER MAGICHOME PASSWORD HERE'
     file = 'PATH TO GOAL HORN MP3 FILE.mp3' 
 
     pygame.init()
