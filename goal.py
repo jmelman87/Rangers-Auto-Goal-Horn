@@ -5,11 +5,15 @@ from kasa import SmartPlug
 import time
 import magichue
 import pygame
+import socket
 
 async def siren():
     user = "ENTER MAGICHOME USER / EMAIL HERE"
     pwd = 'ENTER MAGICHOME PASSWORD HERE'
     file = 'PATH TO GOAL HORN MP3 FILE.mp3' 
+
+    client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    server_address = ('YOUR PICO IP ADDRESS', 8080) #ENTER PICO IP ADDRESS HERE
 
     pygame.init()
     pygame.mixer.init()
@@ -17,19 +21,38 @@ async def siren():
 
     api = magichue.RemoteAPI.login_with_user_password(user=user, password=pwd)
 
-    p = SmartPlug("IP ADDRESS OF YOUR SMART PLUG")
+    try:
+        client_socket.connect(server_address)
+        client_socket.sendall(b'start')
+        client_socket.close()
+    except Exception as e:
+        print(f'Exception occurred while connecting to Pico-W: {str(e)}')
 
-    light = api.get_online_bulbs()[0]
-    light.mode = magichue.RED_BLUE_CROSSFADE # creates red and blue effect on led lights
-    await p.update()
-    await p.turn_on()
-    time.sleep(1)
-    pygame.mixer.music.play()
-    light.turn_on()
-    time.sleep(60) # plays goal horn for 60 seconds
-    await p.turn_off()
-    light.turn_off()
-    pygame.mixer.music.stop()
+    try:
+        p = SmartPlug("YOUR KASA SMARTPLUG IP HERE") #ENTER SMARTPLUG IP HERE
+        await p.update()
+        await p.turn_on()
+        time.sleep(1)
+        pygame.mixer.music.play()
+    except Exception as e:
+        print(f"Exception occurred while working with SmartPlug: {str(e)}")
+
+    try:
+        light = api.get_online_bulbs()[0]
+        light.mode = magichue.RED_BLUE_CROSSFADE #sets up the red and blue pattern on the LED strip lights
+        light.turn_on()
+        time.sleep(60)
+    except Exception as e:
+        print(f"Exception occurred while working with MagicHue light: {str(e)}")
+
+    try:
+        await p.turn_off()
+        light.turn_off()
+        pygame.mixer.music.stop()
+    except Exception as e:
+        print(f"Exception occurred while turning off SmartPlug and MagicHue light: {str(e)}")
+
+
 
 
 headers = {
