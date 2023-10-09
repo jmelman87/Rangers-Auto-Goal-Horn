@@ -43,7 +43,7 @@ and will therefore end the program.
 To use your Kasa Smart Plug with Python, you will need to first install the python-kasa library: simply type "pip install python-kasa" in your terminal. Once that installs, you can use the command "kasa" to get information about devices that are online on your network, and this is how you can get the 
 device's IP address. Please refer to this guide for more detailed information on python-kasa: https://python-kasa.readthedocs.io/en/latest/
 
-** I am currently working on integrating a Raspberry Pi Pico W microchip into this project. I want the program to run off a microchip, instead of off my computer. The Pico W has Wi-Fi capability and will be able to connect to the NHL API directly. 
+** I am currently working on integrating a Raspberry Pi Pico W microchip into the project. I have a 32x8 LED matrix screen that I am using to display a "NYR GOAL!!" sign when the Rangers score. The main program (goal.py) will send a signal to the Pico W over the Wi-Fi to trigger the LED matrix to turn on when they score. I am working on implementing a feature where the main program extracts the name of the player who scored the goal, and then sending the name via a string through a Wi-Fi signal to have the name displayed on the LED sign as well. **
 
 
 
