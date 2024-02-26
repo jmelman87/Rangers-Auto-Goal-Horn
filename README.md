@@ -3,9 +3,10 @@
 I've always wanted to have my own goal horn with the Rangers goal song in my house whenever the Rangers score in a game. With this project, I'm proud to say that I have been able to accomplish just that! 
 
 
+
 For this project, I used:
 
-1. NHL API (https://statsapi.web.nhl.com/api)
+1. NHL API (https://statsapi.web.nhl.com/api) (UPDATE DECEMBER 2023: The NHL API has changed and is now available at https://api-web.nhle.com/v1/ )
 2. Python with various modules
 3. AC powered red siren light
 4. KASA Smart Plug (used to control siren light)
@@ -14,7 +15,7 @@ For this project, I used:
 7. (Raspberry Pi Pico W integration in progress...)
 
 
-Here is a link to the detailed NHL API documentation to learn how to use the API --> https://github.com/dword4/nhlapi#teams
+Here is a link to the detailed NHL API documentation to learn how to use the *NEW* API --> [https://github.com/dword4/nhlapi#teams](https://gitlab.com/dword4/nhlapi/-/blob/master/new-api.md)
 
 Even if you're a fan of a different team, you could slightly modify this program to make it work for you! All you'll really need to get is your team's ID, which 
 can be found here: https://statsapi.web.nhl.com/api/v1/teams - just search for your team name, and the ID listed above your team name is your team's ID.
