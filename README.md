@@ -1,5 +1,9 @@
 # Rangers-Auto-Goal-Horn
 
+
+**UPDATE FEBRUARY 2024:
+Project is in process of being updated...
+
 I've always wanted to have my own goal horn with the Rangers goal song in my house whenever the Rangers score in a game. With this project, I'm proud to say that I have been able to accomplish just that! 
 
 
