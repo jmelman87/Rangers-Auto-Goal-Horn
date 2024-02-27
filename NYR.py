@@ -9,9 +9,9 @@ import pygame
 import socket
 
 async def siren(x):
-    user = "jmelman87@gmail.com"
-    pwd = 'cizgyb-quhfum-0gidGe'
-    file = '/Users/joshmelman/Desktop/goalhorn.mp3'
+    user = "YOUR MAGICHUE USERNAME HERE"
+    pwd = 'MAGICHUE PASSWORD HERE'
+    file = 'PATH TO GOAL HORN MP3 FILE HERE'
 
     time_of_goal = datetime.datetime.now()
     print(time_of_goal)
@@ -25,7 +25,7 @@ async def siren(x):
 
     
     try:
-        p = SmartPlug("192.168.5.73")
+        p = SmartPlug("KASA SMARTPLUG IP HERE")
         await p.update()
         await p.turn_on()
         time.sleep(1)
@@ -59,7 +59,7 @@ headers = {
     "Accept-Language": "en-US,en;q=0.9",
 }
 
-team_abbr = 'NYR' 
+team_abbr = 'TEAM ABBREVIATION HERE' # Ex: NYR, WSH, LAK...
 url = f'https://api-web.nhle.com/v1/club-schedule/{team_abbr}/week/now'
 response = requests.get(url, headers=headers)
 
@@ -107,7 +107,7 @@ if response.status_code == 200:
                 currentScore = 0
                 i = 0 
 
-                if(home_team_name == 'Rangers'):
+                if(home_team_name == 'YOUR TEAM NAME HERE'): # Ex: Rangers, Capitals, Kings...
                     currentScore = home_score
                     print("Rangers are the home team")
                     while(gameStatus != 'OFF' and gameStatus != 'FUT'):
@@ -131,7 +131,7 @@ if response.status_code == 200:
                                 home_score = box_data['homeTeam']['score']
 
                                 if (home_score > currentScore):
-                                    #RANGERS GOAL
+                                    # GOAL SCORED !
                                     currentScore = home_score
                                     print("HOME GOAL")
                                     asyncio.run(siren(game_id))
@@ -171,7 +171,7 @@ if response.status_code == 200:
                                 away_score = box_data['awayTeam']['score']
 
                                 if (away_score > currentScore):
-                                    #RANGERS GOAL
+                                    # GOAL SCORED ! 
                                     currentScore = away_score
                                     print("AWAY GOAL")
                                     asyncio.run(siren(game_id))
