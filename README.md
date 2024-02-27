@@ -21,11 +21,7 @@ For this project, I used:
 
 Here is a link to the detailed NHL API documentation to learn how to use the *NEW* API --> [https://github.com/dword4/nhlapi#teams](https://gitlab.com/dword4/nhlapi/-/blob/master/new-api.md)
 
-Even if you're a fan of a different team, you could slightly modify this program to make it work for you! All you'll really need to get is your team's ID, which 
-can be found here: https://statsapi.web.nhl.com/api/v1/teams - just search for your team name, and the ID listed above your team name is your team's ID.
-
-It is also important to take note of the way the full name is spelled under "name", as you will need to replace 'New York Rangers' on line 81 in goal.py with your team's 
-EXACT name, including capital letters. 
+Even if you're a fan of a different team, you could slightly modify this program to make it work for you! All you need is your team's abbreviation (ex: NYR) and team name (ex: Rangers). 
 
 Make sure to also get an MP3 file of your team's goal song, and get the filepath. I did this simply by searching for the goal song on YouTube and then using a third party website to download the video as an MP3. 
 
