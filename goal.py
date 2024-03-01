@@ -267,13 +267,16 @@ if response.status_code == 200:
 
                                 gameStatus = box_data.get('gameState')
 
+                    
                 
-
+                    # when the game status is no longer LIVE (when the game ends...)
                     away_team_name = box_data['awayTeam']['name']['default']
                     away_score = box_data['awayTeam']['score']
                     home_team_name = box_data['homeTeam']['name']['default']
                     home_score = box_data['homeTeam']['score']
-                    print(f"{away_team_name} {away_score} - {home_score} {home_team_name}")
+                    print(f" Final Score: {away_team_name} {away_score} - {home_score} {home_team_name}")
+
+                    # Check the final score to see if the Rangers came out on top or not
 
                     if(home_team_name == "Rangers"):
                         if(home_score > away_score):
