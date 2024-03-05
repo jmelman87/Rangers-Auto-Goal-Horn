@@ -162,7 +162,9 @@ if response.status_code == 200:
                 currentScore = 0
                 i = 0 
 
-                if(home_team_name == 'Rangers'):
+
+                #If your team is the home team
+                if(home_team_name == 'Your Team Name Here'): # Ex: Rangers, Capitals, Lightning
                     currentScore = home_score
                     print("Rangers are the home team")
                     while(gameStatus != 'OFF' and gameStatus != 'FUT'):
@@ -201,7 +203,7 @@ if response.status_code == 200:
                                 time.sleep(4)
                                 i = i+1
 
-
+                #If your team is the away team
                 else:
                     currentScore = away_score
                     print("Rangers are the away team")
