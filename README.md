@@ -1,8 +1,9 @@
 # Rangers-Auto-Goal-Horn
 
 
-**UPDATE FEBRUARY 2024:
-Project is in process of being updated...
+** UPDATE MARCH 2024
+
+
 
 I've always wanted to have my own goal horn with the Rangers goal song in my house whenever the Rangers score in a game. With this project, I'm proud to say that I have been able to accomplish just that! 
 
@@ -35,6 +36,8 @@ My python script for this project utilizies the following modules:
 5. kasa 
 6. magichue
 7. pygame
+8. datetime
+9. socket
 
 The program uses Requests and JSON to make requests to the NHL's API and read back the information that is being provided by the API. It first checks to see what the next game scheduled is
 for your team, and when it finds the information, it makes a new request to the game-specific boxscore and live feed URLs in order to retrieve information about the game, such as 
@@ -45,6 +48,8 @@ To use your Kasa Smart Plug with Python, you will need to first install the pyth
 device's IP address. Please refer to this guide for more detailed information on python-kasa: https://python-kasa.readthedocs.io/en/latest/
 
 In this program, I am also using Python to control my MagicHome Smart LED lights and make them flash blue and red when the Rangers score. If you have LED lights, you can buy a MagicHome LED controller on Amazon for $10-15 and use this function in your program too! And if you're using the program for a different team, you can have it flash a different set of colors. You'll need to run "pip install python-magichue" to install the necessary library. The documentation for the library can be found here: https://pypi.org/project/python-magichue/
+
+I also have a 32x8 LED matrix screen connected to a Raspberry Pi Pico-W microchip, which waits to receive a signal from the main program (goal.py). When a goal is detected, a signal is sent by socket connection from the computer that's running the main program to the Pico microchip, and when the signal is received, the screen will display "NYR GOAL! RANGERS GOAL!". And after the goal siren and goal song complete, the main program will locate the name of the goal scorer within the API and then it will send another signal to the Pico, and then it will display the goal scorer's name. 
 
 ** I am currently working on integrating a Raspberry Pi Pico W microchip into the project. I have a 32x8 LED matrix screen that I am using to display a "NYR GOAL!!" sign when the Rangers score. The main program (goal.py) will send a signal to the Pico W over the Wi-Fi to trigger the LED matrix to turn on when they score. I am working on implementing a feature where the main program extracts the name of the player who scored the goal, and then sending the name via a string through a Wi-Fi signal to have the name displayed on the LED sign as well. **
 
