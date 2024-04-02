@@ -51,7 +51,6 @@ In this program, I am also using Python to control my MagicHome Smart LED lights
 
 I also have a 32x8 LED matrix screen connected to a Raspberry Pi Pico-W microchip, which waits to receive a signal from the main program (goal.py). When a goal is detected, a signal is sent by socket connection from the computer that's running the main program to the Pico microchip, and when the signal is received, the screen will display "NYR GOAL! RANGERS GOAL!". And after the goal siren and goal song complete, the main program will locate the name of the goal scorer within the API and then it will send another signal to the Pico, and then it will display the goal scorer's name. 
 
-** I am currently working on integrating a Raspberry Pi Pico W microchip into the project. I have a 32x8 LED matrix screen that I am using to display a "NYR GOAL!!" sign when the Rangers score. The main program (goal.py) will send a signal to the Pico W over the Wi-Fi to trigger the LED matrix to turn on when they score. I am working on implementing a feature where the main program extracts the name of the player who scored the goal, and then sending the name via a string through a Wi-Fi signal to have the name displayed on the LED sign as well. **
 
 
 
